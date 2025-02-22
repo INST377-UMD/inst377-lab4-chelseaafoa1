@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+<head>
+    <title>INST377 - JS Practice</title>
+</head>
+
+<body>
+    <h1 id="word">INST377 - Lab 4</h1>
+<div id="box">
+    <form onsubmit="return false;">
+        <label for="name">Name: </label>
+        <input type="text" id="name"required>
+        <button onclick="alertMe()">Alert Me!</button>
+    </form>
+</div>
+
+<div id="box">
+    <button onclick="changeColor()">Change Color</button>
+</div>
+
+<div id="box">
+    <form onsubmit="return false";>
+        <label for="name">Text Tester: </label>
+        <input type="text" id="tester">
+        <button onclick="formValidation()">Validate Text</button>
+    </form>
+</div>
+
+<div id="box">
+    <button onclick="Addtext()">Add Text</button>
+</div>
+    <!-- Javascript Code -->
+    <script type="text/javascript">
+        function alertMe(){
+            name=document.getElementById("name").value
+            alert("Hello "+name)
+        }
+        function changeColor() {
+            
+
+            if (document.body.style.backgroundColor ='blue' ){
+                document.body.style.backgroundColor = 'purple';
+            } else {
+                document.body.style.backgroundColor = 'blue';
+            }
+            
+            
+        }
+
+    <!-- Javascript Code -->
+    function formValidation() {
+            const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if (validationRegex.test(document.getElementById("tester").value)) {
+               
+                alert('How about..... nah :(')
+
+            }
+        }
+    function Addtext(){
+        document.getElementById("word").innerHTML="INST377 - Lab 4 Add text"
+    }
+    </script>
+</body>
+
+</html>
+
